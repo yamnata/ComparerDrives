@@ -1,0 +1,926 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://bean" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://bean" xmlns:intf="http://bean" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://bean" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getIdentifiant">
+    <complexType/>
+   </element>
+   <element name="getIdentifiantResponse">
+    <complexType>
+     <sequence>
+      <element name="getIdentifiantReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setIdentifiant">
+    <complexType>
+     <sequence>
+      <element name="identifiant" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setIdentifiantResponse">
+    <complexType/>
+   </element>
+   <element name="getMdp">
+    <complexType/>
+   </element>
+   <element name="getMdpResponse">
+    <complexType>
+     <sequence>
+      <element name="getMdpReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setMdp">
+    <complexType>
+     <sequence>
+      <element name="mdp" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setMdpResponse">
+    <complexType/>
+   </element>
+   <element name="getNom">
+    <complexType/>
+   </element>
+   <element name="getNomResponse">
+    <complexType>
+     <sequence>
+      <element name="getNomReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setNom">
+    <complexType>
+     <sequence>
+      <element name="nom" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setNomResponse">
+    <complexType/>
+   </element>
+   <element name="getPrenom">
+    <complexType/>
+   </element>
+   <element name="getPrenomResponse">
+    <complexType>
+     <sequence>
+      <element name="getPrenomReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setPrenom">
+    <complexType>
+     <sequence>
+      <element name="prenom" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setPrenomResponse">
+    <complexType/>
+   </element>
+   <element name="getTel">
+    <complexType/>
+   </element>
+   <element name="getTelResponse">
+    <complexType>
+     <sequence>
+      <element name="getTelReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setTel">
+    <complexType>
+     <sequence>
+      <element name="tel" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setTelResponse">
+    <complexType/>
+   </element>
+   <element name="getAdresse">
+    <complexType/>
+   </element>
+   <element name="getAdresseResponse">
+    <complexType>
+     <sequence>
+      <element name="getAdresseReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setAdresse">
+    <complexType>
+     <sequence>
+      <element name="adresse" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setAdresseResponse">
+    <complexType/>
+   </element>
+   <element name="getVille">
+    <complexType/>
+   </element>
+   <element name="getVilleResponse">
+    <complexType>
+     <sequence>
+      <element name="getVilleReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setVille">
+    <complexType>
+     <sequence>
+      <element name="ville" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setVilleResponse">
+    <complexType/>
+   </element>
+   <element name="getCode_postal">
+    <complexType/>
+   </element>
+   <element name="getCode_postalResponse">
+    <complexType>
+     <sequence>
+      <element name="getCode_postalReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setCode_postal">
+    <complexType>
+     <sequence>
+      <element name="code_postal" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setCode_postalResponse">
+    <complexType/>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="setNomRequest">
+
+      <wsdl:part element="impl:setNom" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getPrenomRequest">
+
+      <wsdl:part element="impl:getPrenom" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getMdpRequest">
+
+      <wsdl:part element="impl:getMdp" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setCode_postalRequest">
+
+      <wsdl:part element="impl:setCode_postal" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setVilleRequest">
+
+      <wsdl:part element="impl:setVille" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getIdentifiantRequest">
+
+      <wsdl:part element="impl:getIdentifiant" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setMdpRequest">
+
+      <wsdl:part element="impl:setMdp" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getTelRequest">
+
+      <wsdl:part element="impl:getTel" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getMdpResponse">
+
+      <wsdl:part element="impl:getMdpResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getIdentifiantResponse">
+
+      <wsdl:part element="impl:getIdentifiantResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getTelResponse">
+
+      <wsdl:part element="impl:getTelResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setTelResponse">
+
+      <wsdl:part element="impl:setTelResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getNomResponse">
+
+      <wsdl:part element="impl:getNomResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setTelRequest">
+
+      <wsdl:part element="impl:setTel" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setCode_postalResponse">
+
+      <wsdl:part element="impl:setCode_postalResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCode_postalResponse">
+
+      <wsdl:part element="impl:getCode_postalResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCode_postalRequest">
+
+      <wsdl:part element="impl:getCode_postal" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setPrenomResponse">
+
+      <wsdl:part element="impl:setPrenomResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setMdpResponse">
+
+      <wsdl:part element="impl:setMdpResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getVilleResponse">
+
+      <wsdl:part element="impl:getVilleResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setAdresseRequest">
+
+      <wsdl:part element="impl:setAdresse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setVilleResponse">
+
+      <wsdl:part element="impl:setVilleResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setPrenomRequest">
+
+      <wsdl:part element="impl:setPrenom" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setIdentifiantRequest">
+
+      <wsdl:part element="impl:setIdentifiant" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getVilleRequest">
+
+      <wsdl:part element="impl:getVille" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAdresseRequest">
+
+      <wsdl:part element="impl:getAdresse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getNomRequest">
+
+      <wsdl:part element="impl:getNom" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getPrenomResponse">
+
+      <wsdl:part element="impl:getPrenomResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setNomResponse">
+
+      <wsdl:part element="impl:setNomResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setIdentifiantResponse">
+
+      <wsdl:part element="impl:setIdentifiantResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setAdresseResponse">
+
+      <wsdl:part element="impl:setAdresseResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAdresseResponse">
+
+      <wsdl:part element="impl:getAdresseResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="Utilisateur">
+
+      <wsdl:operation name="getIdentifiant">
+
+         <wsdl:input message="impl:getIdentifiantRequest" name="getIdentifiantRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getIdentifiantResponse" name="getIdentifiantResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setIdentifiant">
+
+         <wsdl:input message="impl:setIdentifiantRequest" name="setIdentifiantRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setIdentifiantResponse" name="setIdentifiantResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getMdp">
+
+         <wsdl:input message="impl:getMdpRequest" name="getMdpRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getMdpResponse" name="getMdpResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setMdp">
+
+         <wsdl:input message="impl:setMdpRequest" name="setMdpRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setMdpResponse" name="setMdpResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getNom">
+
+         <wsdl:input message="impl:getNomRequest" name="getNomRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getNomResponse" name="getNomResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setNom">
+
+         <wsdl:input message="impl:setNomRequest" name="setNomRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setNomResponse" name="setNomResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPrenom">
+
+         <wsdl:input message="impl:getPrenomRequest" name="getPrenomRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getPrenomResponse" name="getPrenomResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setPrenom">
+
+         <wsdl:input message="impl:setPrenomRequest" name="setPrenomRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setPrenomResponse" name="setPrenomResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getTel">
+
+         <wsdl:input message="impl:getTelRequest" name="getTelRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getTelResponse" name="getTelResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setTel">
+
+         <wsdl:input message="impl:setTelRequest" name="setTelRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setTelResponse" name="setTelResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAdresse">
+
+         <wsdl:input message="impl:getAdresseRequest" name="getAdresseRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getAdresseResponse" name="getAdresseResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setAdresse">
+
+         <wsdl:input message="impl:setAdresseRequest" name="setAdresseRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setAdresseResponse" name="setAdresseResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getVille">
+
+         <wsdl:input message="impl:getVilleRequest" name="getVilleRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getVilleResponse" name="getVilleResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setVille">
+
+         <wsdl:input message="impl:setVilleRequest" name="setVilleRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setVilleResponse" name="setVilleResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCode_postal">
+
+         <wsdl:input message="impl:getCode_postalRequest" name="getCode_postalRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getCode_postalResponse" name="getCode_postalResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setCode_postal">
+
+         <wsdl:input message="impl:setCode_postalRequest" name="setCode_postalRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setCode_postalResponse" name="setCode_postalResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="UtilisateurSoapBinding" type="impl:Utilisateur">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getIdentifiant">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getIdentifiantRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getIdentifiantResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setIdentifiant">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setIdentifiantRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setIdentifiantResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getMdp">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getMdpRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getMdpResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setMdp">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setMdpRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setMdpResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getNom">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getNomRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getNomResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setNom">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setNomRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setNomResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPrenom">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getPrenomRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getPrenomResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setPrenom">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setPrenomRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setPrenomResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getTel">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getTelRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getTelResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setTel">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setTelRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setTelResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAdresse">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getAdresseRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getAdresseResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setAdresse">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setAdresseRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setAdresseResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getVille">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getVilleRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getVilleResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setVille">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setVilleRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setVilleResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCode_postal">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getCode_postalRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getCode_postalResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setCode_postal">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setCode_postalRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setCode_postalResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="UtilisateurService">
+
+      <wsdl:port binding="impl:UtilisateurSoapBinding" name="Utilisateur">
+
+         <wsdlsoap:address location="http://localhost:8082/ProjectName/services/Utilisateur"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

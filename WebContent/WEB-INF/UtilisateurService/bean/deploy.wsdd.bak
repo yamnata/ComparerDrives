@@ -1,0 +1,66 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from UtilisateurService WSDL service -->
+
+  <service name="Utilisateur" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://bean"/>
+      <parameter name="wsdlServiceElement" value="UtilisateurService"/>
+      <parameter name="schemaQualified" value="http://bean"/>
+      <parameter name="wsdlServicePort" value="Utilisateur"/>
+      <parameter name="className" value="bean.UtilisateurSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="Utilisateur"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="getIdentifiant" qname="operNS:getIdentifiant" xmlns:operNS="http://bean" returnQName="retNS:getIdentifiantReturn" xmlns:retNS="http://bean" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="setIdentifiant" qname="operNS:setIdentifiant" xmlns:operNS="http://bean" soapAction="" >
+        <parameter qname="pns:identifiant" xmlns:pns="http://bean" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getMdp" qname="operNS:getMdp" xmlns:operNS="http://bean" returnQName="retNS:getMdpReturn" xmlns:retNS="http://bean" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="setMdp" qname="operNS:setMdp" xmlns:operNS="http://bean" soapAction="" >
+        <parameter qname="pns:mdp" xmlns:pns="http://bean" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getNom" qname="operNS:getNom" xmlns:operNS="http://bean" returnQName="retNS:getNomReturn" xmlns:retNS="http://bean" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="setNom" qname="operNS:setNom" xmlns:operNS="http://bean" soapAction="" >
+        <parameter qname="pns:nom" xmlns:pns="http://bean" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getPrenom" qname="operNS:getPrenom" xmlns:operNS="http://bean" returnQName="retNS:getPrenomReturn" xmlns:retNS="http://bean" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="setPrenom" qname="operNS:setPrenom" xmlns:operNS="http://bean" soapAction="" >
+        <parameter qname="pns:prenom" xmlns:pns="http://bean" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getTel" qname="operNS:getTel" xmlns:operNS="http://bean" returnQName="retNS:getTelReturn" xmlns:retNS="http://bean" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="setTel" qname="operNS:setTel" xmlns:operNS="http://bean" soapAction="" >
+        <parameter qname="pns:tel" xmlns:pns="http://bean" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getAdresse" qname="operNS:getAdresse" xmlns:operNS="http://bean" returnQName="retNS:getAdresseReturn" xmlns:retNS="http://bean" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="setAdresse" qname="operNS:setAdresse" xmlns:operNS="http://bean" soapAction="" >
+        <parameter qname="pns:adresse" xmlns:pns="http://bean" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getVille" qname="operNS:getVille" xmlns:operNS="http://bean" returnQName="retNS:getVilleReturn" xmlns:retNS="http://bean" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="setVille" qname="operNS:setVille" xmlns:operNS="http://bean" soapAction="" >
+        <parameter qname="pns:ville" xmlns:pns="http://bean" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getCode_postal" qname="operNS:getCode_postal" xmlns:operNS="http://bean" returnQName="retNS:getCode_postalReturn" xmlns:retNS="http://bean" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="setCode_postal" qname="operNS:setCode_postal" xmlns:operNS="http://bean" soapAction="" >
+        <parameter qname="pns:code_postal" xmlns:pns="http://bean" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="getVille getMdp setVille setMdp setNom setAdresse getAdresse setIdentifiant getTel getPrenom setPrenom setCode_postal getIdentifiant getCode_postal setTel getNom"/>
+
+  </service>
+</deployment>

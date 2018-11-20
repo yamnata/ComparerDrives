@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<!-- Le fichier Struts.xml, hérite d’un fichier plus important : struts-default.xml qui définit un ensemble de mécanismes par défaut,sert principalement au routage de nos actions et à la navigation -->
+<struts>
+  <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+  <constant name="struts.devMode" value="false" />
+  <constant name="struts.custom.i18n.resources" value="package" />
+  
+  <package name="frontoffice" namespace="/" extends="struts-default" >
+     <default-action-ref name="index"/>
+     <!-- navigation rules -->
+     <action name="comparer" class="beanAction.UtilisateurAction" method="identifierUtilisateurs">
+        <result name="success">comparer.jsp</result>
+        <result name="error">index.jsp</result>
+     </action> 
+      <action name="connexion" class="beanAction.UtilisateurAction" method="identifierUtilisateurs">
+        <result name="success">comparer.jsp</result>
+        <result name="error">index.jsp</result> 
+     </action> 
+     <action name="enregistrer" class="beanAction.EnregistrerAction" >
+        <result name="success">comparer.jsp</result>
+        <result name="input">index.jsp</result>        
+     </action> 
+     <action name="deconnexion" class="beanAction.DeconnexionAction" method="executer">
+        <result name="success">index.jsp</result>
+     </action> 
+     <action name="ajouterDrive" class="beanAction.AjouterDriveAction" method="execute">
+        <result name="success">produit.jsp</result>
+        <result name="error">comparer.jsp</result>        
+     </action> 
+     
+     <action name="afficherProduit" class="beanAction.AfficherAction" method="afficherProduit">
+        <result name="success">produit.jsp</result>
+        <result name="error">index1.jsp</result>        
+     </action> 
+     
+     <action name="naviguerAcc" class="beanAction.NaviguerAction">
+        <result name="success">index1.jsp</result>      
+     </action>
+     <action name="naviguerArt" class="beanAction.NaviguerAction">
+        <result name="success">article1.jsp</result>      
+     </action>
+     <action name="naviguerCom" class="beanAction.NaviguerAction">
+        <result name="success">comparer.jsp</result>      
+     </action>   
+    
+  </package>
+</struts>

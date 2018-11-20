@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!-- Ce fichier déclare les différents paramètres nécessaires à la connexion à la base de donnée -->              
+<Context docBase="Comparer_drive" path="/Comparer_drive">
+ 
+ 
+		<Resource name="jdbcMysql"
+		          factory="org.apache.commons.dbcp.BasicDataSourceFactory" 
+		          auth="Container" 
+		          type="javax.sql.DataSource"
+		          username="root" 
+		          password="mouroujI2074" driverClassName="com.mysql.jdbc.Driver"
+		          url="jdbc:mysql://localhost:3306/base_produit"
+		          maxActive="20" 
+		          maxIdle="10" 
+		          validationQuery="SELECT 1"
+		/>
+ 
+</Context>

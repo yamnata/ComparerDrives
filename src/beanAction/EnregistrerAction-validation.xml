@@ -1,0 +1,30 @@
+
+<!DOCTYPE validators >
+<validators>
+ 
+    
+    <field name="utilisateur.identifiant">
+        <field-validator type="requiredstring">
+            <message>inserer votre login</message>
+        </field-validator>
+        <field-validator type="stringlength">
+            <param name="minLength">2</param>
+            <message key="requiredidentifiant"/>
+        </field-validator>
+    </field>
+    <field name="utilisateur.mdp">
+        <field-validator type="requiredstring">
+            <message>inserer votre mot de passe</message>
+        </field-validator>
+        <field-validator type="stringlength">
+            <param name="minLength">2</param>
+         
+            <message key="requiredmdp"/>
+        </field-validator>
+    </field>
+    
+    
+    
+    
+    
+</validators>

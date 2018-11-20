@@ -1,0 +1,25 @@
+<!DOCTYPE validators PUBLIC
+        "-//OpenSymphony Group//XWork Validator 1.0.2//EN"
+        "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+<validators>
+ 
+    <field name="utilisateur.identifiant">
+        <field-validator type="requiredstring">
+            <message>login invalide</message>
+        </field-validator>
+        <field-validator type="stringlength">
+            <param name="minLength">2</param>
+            <message key="requiredstring"/>
+        </field-validator>
+    </field>
+    <field name="utilisateur.mdp">
+        <field-validator type="requiredstring">
+            <message>mot de passe minimum 2 caracteres</message>
+        </field-validator>
+        <field-validator type="stringlength">
+            <param name="minLength">2</param>
+         
+            <message key="requiredmdp"/>
+        </field-validator>
+    
+</validators>    
